@@ -16,5 +16,11 @@ _Improve your development skills by training with your peers using coding challe
 
 
 Visit [codewars.com](https://www.codewars.com/) for more information.
- 
 
+### My profile
+
+You can take a look at my profile following the link: 
+
+- [Jaime Alvarez](https://www.codewars.com/users/Jaime%20%C3%81lvarez) 
+
+![codewars](https://www.codewars.com/users/Jaime%20%C3%81lvarez/badges/small) 
