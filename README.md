@@ -10,9 +10,11 @@ Codewars is a collective effort by its users. They are creators - authoring kata
 techniques, solving kata with solutions that enlighten others, and commenting with constructive 
 feedback. The leaders among them moderate the content and community.
 
-_Achieve mastery through challenge._
+"_Achieve mastery through challenge._
 
-_Improve your development skills by training with your peers using coding challenges._
+_Improve your development skills by training with your peers using coding challenges._"
+
+![cw_logo](https://user-images.githubusercontent.com/88266316/144408291-275630af-ef21-40d3-ba11-62c52723c18a.jpg)
 
 
 Visit [codewars.com](https://www.codewars.com/) for more information.
