@@ -29,11 +29,17 @@
 #
 # Newer translations have some reducible fractions. To be on the safe side it is better to do a bit more work by
 # simplifying fractions even if they don't have to be.
+test_1 = [[77033412951888080, 14949283383840498], [117787497858828, 14949283383840498], [2526695441399712, 14949283383840498]]
+should_equal = [[77033412951888085, 14949283383840498], [117787497858828, 14949283383840498], [2526695441399712, 14949283383840498]]
+given = [[1, 2], [1, 3], [1, 4]]
 
-given = [[1, 4], [1, 8], [1, 5]]
 
 def convert_fracts(numbers):
-
+    import math
+    lcm = 1
+    for i in [x[1] for x in numbers]:
+        lcm = lcm * i // math.gcd(lcm, i)
+    return [[int((lcm / y[1]) * y[0]), lcm] for y in numbers]
 
 
 print(convert_fracts(given))
