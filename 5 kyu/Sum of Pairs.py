@@ -24,15 +24,38 @@
 # Negative numbers and duplicate numbers can and will appear.
 #
 # NOTE: There will also be lists tested of lengths upwards of 10,000,000 elements. Be sure your code doesn't time out.
+import unittest
+
 
 def sum_pairs(listed_numbers, total_sum):
     result = []
-    for x in range(len(listed_numbers)):
-        for y in range(len(listed_numbers)):
-            if listed_numbers[x] + listed_numbers[y] == total_sum:
-                result.append(listed_numbers[x])
-                result.append(listed_numbers[y])
-    return result
+    for number in listed_numbers:
+        if len(result) < 2:
+            for addition in listed_numbers:
+                if number + addition == total_sum:
+                    result.append(number)
+                    result.append(addition)
+                    break
+        else:
+            break
+    if len(result) == 0:
+        return None
+    else:
+        return result
 
 
-print(sum_pairs([10, 5, 2, 3, 7, 5],         10))
+class TestCases(unittest.TestCase):
+
+    def test_basic(self):
+        self.assertEqual(sum_pairs([11, 3, 7, 5], 10), [3, 7])
+        self.assertEqual(sum_pairs([4, 3, 2, 3, 4], 6), [4, 2])
+
+    def test_none(self):
+        self.assertEqual(sum_pairs([0, 0, -2, 3], 2), None)
+
+    def test_closest(self):
+        self.assertEqual(sum_pairs([10, 5, 2, 3, 7, 5], 10), [3, 7])
+
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)
