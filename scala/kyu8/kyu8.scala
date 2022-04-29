@@ -59,9 +59,7 @@ object kyu8 {
   println(removeFirstAndLastChar("AdsgsdgfA"))
 
   def reversedStrings(str:String): String = {
-    val new_string = str.reverse
-    println(new_string)
-    str
+    str.reverse
   }
 
   println(reversedStrings("Hello"))
