@@ -41,12 +41,12 @@ object kyu8 {
     ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
     None of the arrays will be empty, so you don't have to worry about that!
      */
-    println(for (e <- list.indices if e % 2 == 0) yield list(e))
+    // println(for (e <- list.indices if e % 2 == 0) yield list(e))
     val test = (for (elem <- list.indices if elem % 2 == 0) yield list(elem)).toList
     test
   }
 
-  println(removingElements(List("Keep", "Remove", "Keep", "Remove", "Keep")))
+  // println(removingElements(List("Keep", "Remove", "Keep", "Remove", "Keep")))
 
   def opposite(number: Double): Double = {
     if (number > 0) -number else number.abs
@@ -56,17 +56,25 @@ object kyu8 {
   def removeFirstAndLastChar(s: String): String = {
     s.slice(1, s.length - 1)
   }
-  println(removeFirstAndLastChar("AdsgsdgfA"))
+  // println(removeFirstAndLastChar("AdsgsdgfA"))
 
   def reversedStrings(str:String): String = {
     str.reverse
   }
 
-  println(reversedStrings("Hello"))
+  // println(reversedStrings("Hello"))
 
   def repeatStr(times: Int, str: String): String = {
     str * times
   }
 
-  println(repeatStr(3, "hello"))
+  // println(repeatStr(3, "hello"))
+
+  def summation(n: Int): Int = {
+    if (n == 1) 1 else n + summation(n - 1)
+  }
+
+  // println(summation(8))
+
+  def summationCW(n: Int): Int = (1 to n).sum
 }
