@@ -77,4 +77,10 @@ object kyu8 {
   // println(summation(8))
 
   def summationCW(n: Int): Int = (1 to n).sum
+
+  def squareNSum(n: List[Int]): Int = {
+    n.map(math.pow(_, 2)).sum.toInt
+  }
+
+  def squareSum(xs: List[Int]): Int = xs.map(x => x*x).sum
 }
