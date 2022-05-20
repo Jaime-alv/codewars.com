@@ -77,17 +77,6 @@ object kyu7 {
 
   // println(getTheMiddleCharacter("testing"))
 
-  // TODO: exercise not completed!
-  def speedControl(distance: List[Double], s: Int): Int = {
-    val avg = distance.length
-    println(avg)
-    if (distance.size == 2) (3600 * (distance.take(2).sum - distance.take(1).sum) / s).toInt
-    else
-      ((3600 * (distance.take(2).sum - distance.take(1).sum) / s) + speedControl(distance.drop(2), s)).toInt
-  }
-
-  // println(speedControl(List(0.0, 0.19, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25), 15))
-
   def sumOfNumbers(a: Int, b: Int): Int = {
     (for (i <- List(a, b).min to List(a, b).max) yield i).sum
   }
@@ -114,5 +103,5 @@ object kyu7 {
     busStops.map(x => x._1 - x._2).sum
   }
 
-  println(numberOfPeopleInTheBus(List((3, 0), (9, 1), (4, 10), (12, 2), (6, 1), (7, 10))))
+  // println(numberOfPeopleInTheBus(List((3, 0), (9, 1), (4, 10), (12, 2), (6, 1), (7, 10))))
 }
