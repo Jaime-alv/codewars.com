@@ -1,6 +1,7 @@
 package codewars.kyu6
 
-import scala.math
+import scala.annotation.tailrec
+
 object BuildAPileOfCubes extends App{
   /*
   Your task is to construct a building which will be a pile of n cubes. The cube at the bottom will have a volume of
@@ -14,15 +15,19 @@ object BuildAPileOfCubes extends App{
   findNb(91716553919377) --> -1
    */
 
-  def findNb(m: Int): Int = {
-    if (m == 1) m
-    else math.pow(m, 1/3).toInt + findNb(m - 1)
+  @tailrec
+  def findNb(m: Long, n: Int = 0, o: Long = 0): Int = {
+    if (o == m) n - 1
+    else if (o > m) -1
+    else findNb(m, n + 1, math.pow(n, 3).toLong + o)
   }
 
-  def power(m: Int): Int = {
-    if (m == 1) m
-    else math.pow(m, 3).toInt + power(m - 1)
+  def power(y: Int): Int = {
+    if (y == 1) y
+    else math.pow(y, 3).toInt + power(y - 1)
   }
-  println(power(4))
+
   println(findNb(1071225))
+  println(power(45))
+  print(findNb(91716553919377L))
 }
